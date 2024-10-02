@@ -1,12 +1,16 @@
-# 😎 My API
+<div align="center">
+    <h1>😎 My API</h1>
+    <img src="./assets/walking.gif" alt="walking.gif" />
+    <p>基于 Deno 和 Hono 构建的简单 API 列表项目</p>
+</div>
 
-> 使用 [Deno](https://deno.com) + [Hono](https://hono.dev) 构建的简单 API 列表项目。
+
 
 ## 🧐 API 目录
 
 > 按照添加时间排序。
 
-1. 哔哩哔哩视频封面
+1. [哔哩哔哩视频封面](#哔哩哔哩视频封面)
 2. ……
 
 ## 🎨 返回格式
