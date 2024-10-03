@@ -4,7 +4,7 @@
     "hono": "jsr:@hono/hono@^4.6.3"
   },
   "tasks": {
-    "start": "deno run --unstable-cron --allow-net main.ts"
+    "start": "deno run --unstable-kv --unstable-cron --allow-net main.ts"
   },
   "compilerOptions": {
     "jsx": "precompile",
