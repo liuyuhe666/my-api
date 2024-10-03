@@ -25,6 +25,10 @@
 
 请求路径: `/api/bili/video/cover/:bvid`
 
+添加查询参数 `?e=image` 重定向到原图直链
+
+`/api/bili/video/cover/:bvid?e=image`
+
 成功响应示例:
 
 ```json
