@@ -1,8 +1,9 @@
-import { Context } from "hono"
+import { Hono } from 'hono'
 import { HTTPException } from 'hono/http-exception'
 import { DOMParser } from "jsr:@b-fuze/deno-dom"
-import { wrapBaseResponse } from "../../utils/index.ts";
+import { wrapBaseResponse } from "../utils/index.ts"
 
+const tiobe = new Hono()
 const baseUrl = 'https://www.tiobe.com'
 const url = `${baseUrl}/tiobe-index`
 const key = 'tiobe:top20'
@@ -20,7 +21,7 @@ interface Item {
     change: string
 }
 
-const getTop20 = async (c: Context) => {
+tiobe.get('/top20', async (c) => {
     // 从缓存中读取
     const cacheData = cache.get(key)
     if (cacheData) {
@@ -48,6 +49,6 @@ const getTop20 = async (c: Context) => {
     } catch (e) {
         throw new HTTPException(500, { message: '获取数据失败', cause: e })
     }
-}
+})
 
-export default getTop20
+export default tiobe

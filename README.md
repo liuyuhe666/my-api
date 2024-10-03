@@ -31,7 +31,9 @@
 {
     "ok": true,
     "message": "所有数据均来自官方, 开源地址: https://github.com/liuyuhe666/my-api",
-    "data": "http://i2.hdslb.com/bfs/archive/8565873a70f3460c9c7b274ea4a53fbae9119a42.jpg"
+    "data": {
+        "pic": "http://i2.hdslb.com/bfs/archive/3e4a4df41d4475b1930bf62879047f493b053501.jpg"
+    }
 }
 ```
 

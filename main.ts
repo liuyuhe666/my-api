@@ -8,13 +8,13 @@ const app = new Hono()
 
 app.use(prettyJSON())
 app.use(cors())
-app.notFound((c) => c.json({ message: 'Not Found', ok: false }, 404))
+app.notFound((c) => c.json({ ok: false, message: 'Not Found' }, 404))
 app.onError((err, c) => {
-  return c.json({ message: err.message, ok: false })
+  return c.json({ ok: false, message: err.message })
 })
 
 app.get('/', (c) => {
-  return c.json({ message: appInfo.defaultMessage, ok: true, data: 'Hello World!' })
+  return c.json({ ok: true, message: appInfo.defaultMessage, data: 'Hello World!' })
 })
 
 app.route('/api', api)
