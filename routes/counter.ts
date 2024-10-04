@@ -31,6 +31,7 @@ function renderSvg(num: number): string {
 counter.get('/', async (c) => {
     const key = c.req.query('key') || ''
     c.header('Content-Type', 'image/svg+xml')
+    c.header('Cache-Control', 'max-age=0, no-cache, no-store, must-revalidate')
     if (!key || key === '') {
         return c.body(renderSvg(123456789))
     }
