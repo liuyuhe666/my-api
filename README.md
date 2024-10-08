@@ -14,6 +14,7 @@
 2. [TIOBE 编程语言排行榜 Top20](https://github.com/liuyuhe666/my-api/wiki/TIOBE-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E6%8E%92%E8%A1%8C%E6%A6%9C-Top20)
 3. [计数器](https://github.com/liuyuhe666/my-api/wiki/%E8%AE%A1%E6%95%B0%E5%99%A8)
 4. [代理](https://github.com/liuyuhe666/my-api/wiki/%E4%BB%A3%E7%90%86)
+5. [哔哩哔哩排行榜](https://github.com/liuyuhe666/my-api/wiki/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E6%8E%92%E8%A1%8C%E6%A6%9C)
 
 ## 🎨 返回格式
 
