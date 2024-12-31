@@ -64,16 +64,22 @@ bili.get('/video/info/:bvid', async (c) => {
 bili.get('/video/stream/:bvid/:cid', async (c) => {
   const bvid = c.req.param('bvid')
   const cid = c.req.param('cid')
+  const sessdata = c.req.query('sessdata')
   if (!bvid || !cid) {
     throw new HTTPException(400, { message: 'bvid 或 cid 不能为空' })
+  }
+  const headers = {
+    Referer: 'https://www.bilibili.com',
+    'User-Agent': ua,
+    Cookie: '',
+  }
+  if (sessdata) {
+    headers['Cookie'] = `SESSDATA=${sessdata}`
   }
   try {
     const { data = {} } = await (
       await fetch(`https://api.bilibili.com/x/player/playurl?bvid=${bvid}&cid=${cid}&qn=0&fnval=80&fnver=0&fourk=1`, {
-        headers: {
-          Referer: 'https://www.bilibili.com',
-          'User-Agent': ua,
-        },
+        headers,
       })
     ).json()
     return c.json(wrapBaseResponse(data))
